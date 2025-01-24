@@ -34,10 +34,23 @@ The code is structure as follows:
     ├── explainability/   
     │   │  
     |   └──	library_explainanility.R   <- library with function for the explainability of the models
-    │  
-    └── support/ 
-        │
-        └── library_help.R     <- library with other functions
+    |
+    ├── analysis/
+    │   ├── library_analysis.R
+    │   ├── plots.R
+    |   └──	processate_metrics.R  
+    |     
+    ├── support/
+    |   ├── merge_resulst_models.R
+    |
+    ├── analysis_results_ML_models.R
+    ├── aggregated_normalized_shap.R
+    ├── candidate_genes_analytical.R
+    ├── candidate_genes_mclust.R
+    ├── input_lists_barplot.R
+    ├── subgroups_analysis_shap.R
+    ├── upset_plot_top_shap.R
+    └── venn_diagram_seed_lists.R
 ```
 
 ## main.R

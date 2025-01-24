@@ -1,6 +1,5 @@
 # Systems Biology and Explainable AI Ensembles to Uncover Complex Diseases
 Iria Pose-Lagoa, Beatriz Urda-García, Jon Sánchez-Valle, Jose Carbonell-Caballero, Alfonso Valencia
-#<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
 
 ### Abstract
 Human complex diseases, such as Chronic Obstructive Pulmonary Disease (COPD), pose significant challenges due to their inherent heterogeneity. To enhance the identification of novel candidate genes associated with COPD, this study

@@ -154,7 +154,7 @@ Notes on procedures:
 
 ⚠️It is still pending the integration of the Differential Expression Analysis and the expansion made with GUILDify.
 
-## 2. Classification performance
+### 2. Classification performance
 
 This function perform the training of the models. It takes as input the following variables:
 
@@ -182,7 +182,7 @@ There are another extra function `extracted_results` for extract the cross_valid
     - Confusion matrix
     - Misclassified samples
 
-## 3. Explainability
+### 3. Explainability
 
 This function extract the importance value for each sample and each variable by model. It takes as input the following variables:
 
@@ -200,3 +200,9 @@ The results are given as a list of lists as follows:
 
 - Model 1 (RF)
     - shap_results: the shap results are given as a unique importance value for sample and gene.
+
+## 4. ML analysis and generation of candidate list of genes
+
+We create RadarCharts with the prediction performance across all scenarios: `analysis_results_ML_models.R`.
+We analyse the shap values, create aggregated metrics and obtain the candidate list of genes: `aggregated_normalized_shap.R`, `candidate_genes_analytical.R`, `candidate_genes_mclust.R`
+

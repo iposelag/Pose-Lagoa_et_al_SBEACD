@@ -1,4 +1,6 @@
 # Systems Biology and Explainable AI Ensembles to Uncover Complex Diseases
+Iria Pose-Lagoa, Beatriz Urda-García, Jon Sánchez-Valle, Jose Carbonell-Caballero, Alfonso Valencia
+#<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
 
 ### Abstract
 Human complex diseases, such as Chronic Obstructive Pulmonary Disease (COPD), pose significant challenges due to their inherent heterogeneity. To enhance the identification of novel candidate genes associated with COPD, this study
@@ -38,22 +40,6 @@ The code is structure as follows:
         │
         └── library_help.R     <- library with other functions
 ```
-
-## main.R
-Example of command line:  
-```
-Rscript main.R --directory_to_load "../COPD/raw_data" \
-               --file_name "expression" \
-               --target_var "dis_condition" \
-               --directory_to_save "../COPD/results" \
-               --procedure "disease_related" \
-               --disease_code "C0024117" \
-               --ml_models_to_run "rf" "glm
-```
-The main script gives as results two .rds files: 
-
-- results_models.rds
-- results_shap.rds
 
 ## main.R
 Example of command line:  

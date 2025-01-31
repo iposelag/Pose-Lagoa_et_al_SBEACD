@@ -150,7 +150,7 @@ Notes on procedures:
     Omnipath requires internet connection. Moreover, each expansion will run the required seed list first, and then, compute the expansion.
     
 
-⚠️It is still pending the integration of the Differential Expression Analysis and the expansion made with GUILDify.
+⚠️The list of differentially expressed genes should be provided in advance. Moreover, the expansion with GUILDify should be done with http://sbi.imim.es/web/GUILDify.php
 
 ### 2. Classification performance
 

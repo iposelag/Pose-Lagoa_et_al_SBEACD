@@ -490,6 +490,15 @@ ggplot(sreactome_results[1:30, ], aes(x = reorder(Term, Odds.Ratio), y = Odds.Ra
 ## ----------------------------------------------------------------------------------------------------------------------------------------
 # Upset plot origin of selected genes
 feature_lists_sgens <- feature_lists %>% filter(Gene %in% sgenes$variable_name)
+
+# Save the original list where each candidate gene came from
+candidate_genes <- sgenes[,c("variable_name", "aggregated_max")]
+candidate_genes <- candidate_genes %>% rename(Gene = variable_name)
+feature_lists_sgens <- merge(feature_lists_sgens,candidate_genes, by = "Gene")
+# Order by aggregated max
+feature_lists_sgens <- feature_lists_sgens[order(-feature_lists_sgens$aggregated_max), ] 
+write.csv(feature_lists_sgens, "../COPD/results/candidate_genes_vs_feature_lists.csv", row.names = FALSE)
+
 # Check the structure of the data
 str(feature_lists_sgens)
 

@@ -12,7 +12,7 @@ expression <- expression_train
 load("../COPD/raw_data/phenotypic.Rda")
 
 # Load normalized shap data
-norm <- read.table("../COPD/norm_results.csv", header=T, sep=",", stringsAsFactors = F)
+norm <- read.table("../COPD/results/norm_results.csv", header=T, sep=",", stringsAsFactors = F)
 
 ## ----------------------------------------------------------------------------------------------------------------------------------------
 # Prepare data for plotting 
@@ -31,7 +31,7 @@ top_genes <- norm_filtered$variable_name
 
 # ---------------------
 # Prepare shap data: aggregated of all normalized scenarios matrix 
-normalized_shap <- readRDS("../COPD/normalized_shap_all_combinations_list.Rds")
+normalized_shap <- readRDS("../COPD/results/normalized_shap_all_combinations_list.Rds")
 
 results_shap_dfr <- imap_dfr(normalized_shap, function(data, combination_name) {
   data %>%

@@ -65,7 +65,6 @@ heatmap_matrix <- as.matrix(heatmap_norm_shap[,-1]) # Remove the first column (g
 rownames(heatmap_matrix) <- heatmap_norm_shap$variable_name # Set gene names as row names
 colnames(heatmap_matrix) <- samples_norm_shap
 
-
 # ---------------------
 # Prepare annotation data for plotting
 pdata_interest <- c("dis_condition","GOLD_stage", "sex", "smoker", "age", 
@@ -84,7 +83,7 @@ phenotypic_ctics_interest <- phenotypic_ctics_interest %>%
 phenotypic_ctics_interest$sample_id <- rownames(phenotypic_ctics_interest)
 # Filter samples
 phenotypic_ctics_interest <- subset(phenotypic_ctics_interest, sample_id %in%
-                                      samples_expression)
+                                      samples_norm_shap)
 # Rename sample_id to sample in phenotypic_ctics_interest_train
 phenotypic_ctics_interest <- phenotypic_ctics_interest %>%
   rename(sample_id = sample_id)

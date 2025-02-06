@@ -20,9 +20,9 @@ input_data = "normalized_shaps"
 ## ----------------------------------------------------------------------------------------------------------------------------------------
 # Load the data
 if (input_data == "rank"){
-  data <- read.csv("SHAP/rank_results.csv")
+  data <- read.csv("SHAP/results/rank_results.csv")
 }else if(input_data == "normalized_shaps"){
-  data <- read.csv("../COPD/norm_results.csv")
+  data <- read.csv("../COPD/results/norm_results.csv")
 }
 
 # write.csv(data_filtered, "../COPD/norm_candidate_results.csv", row.names = FALSE)
@@ -374,7 +374,7 @@ dev.off()
 threshold = 0.0109
 
 sgenes = data[data$aggregated_max > threshold, ]
-nrow(sgenes) # 176 genes
+nrow(sgenes) # 172 genes
 
 (nrow(sgenes) / nrow(data))*100 # 7.08986
 
